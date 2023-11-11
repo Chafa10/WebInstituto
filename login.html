@@ -7,13 +7,14 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="assets/css/login.css">
     
 </head>
@@ -29,10 +30,10 @@
     
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto active" href="index.html">Inicio</a></li> 
-              <li><a class="nav-link scrollto" href="#carreras">Incribirse a Carrera</a></li>
-              <li><a class="nav-link scrollto" href="inscripcion.html">Incribirse a Materias</a></li>
-              <li><a class="getstarted scrollto" href="registro.html">Registrarse</a></li>
+              <li><a class="nav-link scrollto active" href="/index.html">Inicio</a></li> 
+              <li><a class="nav-link scrollto" href="/inscripcioncarreras.html">Incribirse a Carrera</a></li>
+              <li><a class="nav-link scrollto" href="/inscripcionmaterias.html">Incribirse a Materias</a></li>
+              <li><a class="getstarted scrollto" href="/registro.html">Registrarse</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -50,20 +51,22 @@
                     </div>
                     <div class="col-md-6 order-1 order-lg-2 text-left align-items-stretch">
                         <form action="forms/contact.php" method="post" role="form" class="email-form">
-                          <h3 class="text-center mb-3">Iniciar Sesion</h3>
-                            <div class="form-group">
-                                <label for="email" class="text-left">Email</label>
-                                <input type="text" name="email" class="form-control" id="email" required>
-                                <i class='bx bxs-user'></i>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-left">Contraseña</label>
-                                <input type="password" class="form-control" name="password" id="password" required>
-                                <i class='bx bxs-lock-alt' ></i>
-                            </div>
+                          <h3 class="text-center mb-5">Iniciar Sesion</h3>
+                          
+                            <div class="form-floating mb-5 mt-3 form-group">
+                              <input class="form-control" name="Email" id="Email" type="text" placeholder="Ingrese su email" />
+                              <label for="name">Email</label>
+                              <i class='bx bxs-user'></i>
+                          </div>
+                           
+                            <div class="form-floating mb-3 mt-3 form-group">
+                              <input class="form-control" name="Password" id="Password" type="password" placeholder="Ingrese su apellido" />
+                              <label for="name">Contraseña</label>
+                              <i class='bx bxs-lock-alt' ></i>
+                          </div>
                             <div class="remember d-flex justify-content-between align-items-center">
-                              <label class="d-flex align-items-center pt-2" for="">
-                                  <input type="checkbox"> Recordarme
+                              <label class="d-flex align-items-center pt-2" for="Recordarme">
+                                  <input type="checkbox" name="Recordarme"> Recordarme
                               </label>
                               <a href=""> Olvido su contraseña? </a>
                           </div>
@@ -98,7 +101,7 @@
     
     
     
-
+    <script src="/assets/js/main.js"></script>
     
 </body>
 </html>

@@ -7,12 +7,12 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+  
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/registro.css">
     
@@ -29,10 +29,10 @@
     
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto active" href="index.html">Inicio</a></li> 
-              <li><a class="nav-link scrollto" href="#carreras">Incribirse a Carrera</a></li>
-              <li><a class="nav-link scrollto" href="inscripcion.html">Incribirse a Materias</a></li>
-              <li><a class="getstarted scrollto" href="login.html">Iniciar Sesion</a></li>
+              <li><a class="nav-link scrollto active" href="%index.html">Inicio</a></li> 
+              <li><a class="nav-link scrollto" href="/inscripcioncarreras.html">Incribirse a Carrera</a></li>
+              <li><a class="nav-link scrollto" href="/inscripcionmaterias.html">Incribirse a Materias</a></li>
+              <li><a class="getstarted scrollto" href="/login.html">Iniciar Sesion</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -51,36 +51,41 @@
                     <div class="col-md-6 order-1 order-lg-2 text-left align-items-stretch">
                         <form action="forms/contact.php" method="post" role="form" class="email-form">
                           <h3 class="text-center mb-3">Registrarse</h3>
-                          <div class="form-group">
-                            <label for="name" class="text-left">Nombre</label>
-                            <input type="text" name="name" class="form-control" id="name" required>
-                            <i class='bx bxs-user'></i>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname" class="text-left">Apellido</label>
-                            <input type="text" name="lastname" class="form-control" id="lastname" required>
-                            <i class='bx bxs-user'></i>
-                        </div>
-                            <div class="form-group">
-                                <label for="email" class="text-left">Email</label>
-                                <input type="text" name="email" class="form-control" id="email" required>
-                                <i class='bx bxs-envelope' ></i>
-                            </div>
-                            <div class="form-group">
-                                <label for="dni" class="text-left">Documento</label>
-                                <input type="text" name="dni" class="form-control" id="dni" required>
-                                <i class='bx bxs-id-card'></i>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-left">Contraseña</label>
-                                <input type="password" class="form-control" name="password" id="password"  required>
-                                <i class='bx bxs-lock-alt' ></i>
-                            </div>
-                            <div class="form-group">
-                                <label for="repeat-password" class="text-left">Repita Contraseña</label>
-                                <input type="password" class="form-control" name="repeat-password" id="password"  required>
-                                <i class='bx bxs-lock-alt' ></i>
-                            </div>
+                          
+                        <div class="form-floating mb-5 mt-3 form-group">
+                          <input class="form-control" name="name" id="name" type="text" required placeholder="Ingrese su Nombre" />
+                          <label for="name">Nombre</label>
+                          <i class='bx bxs-user'></i>
+                      </div>
+                        
+                        <div class="form-floating mb-5 mt-3 form-group">
+                          <input class="form-control" name="lastname" id="lastname" type="text" required placeholder="Ingrese su Apellido" />
+                          <label for="lastname">Apellido</label>
+                          <i class='bx bxs-user'></i>
+                      </div>
+                          
+                            <div class="form-floating mb-5 mt-3 form-group">
+                              <input class="form-control" name="email" id="email" type="text" required placeholder="Ingrese su Email" />
+                              <label for="email">Email</label>
+                              <i class='bx bxs-envelope' ></i>
+                          </div>
+                            
+                            <div class="form-floating mb-5 mt-3 form-group">
+                              <input class="form-control" name="dni" id="dni" type="text" required placeholder="Ingrese su Documento" />
+                              <label for="dni">Documento</label>
+                              <i class='bx bxs-id-card'></i>
+                          </div>
+                          
+                            <div class="form-floating mb-5 mt-3 form-group">
+                              <input class="form-control" name="password" id="password" type="password" required placeholder="Ingrese su Documento" />
+                              <label for="password">Contraseña</label>
+                              <i class='bx bxs-lock-alt' ></i>
+                          </div>
+                            <div class="form-floating mb-5 mt-3 form-group">
+                              <input class="form-control" name="repeat-password" id="repeat-password" type="password" required placeholder="Ingrese su Documento" />
+                              <label for="repeat-password">Repita Contraseña</label>
+                              <i class='bx bxs-lock-alt' ></i>
+                          </div>
 
                           
                             <button type="submit" class="btn btn-primary">Iniciar</button>
@@ -113,7 +118,7 @@
     
     
     
-
+    <script src="/assets/js/main.js"></script>
     
 </body>
 </html>

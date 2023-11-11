@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Merriweather Sans", sans-serif;
     background: #37517e;
 
   }
@@ -26,7 +26,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: "Jost", sans-serif;
+    font-family: "Merriweather Sans", sans-serif;
   }
 
 /*--------------------------------------------------------------
@@ -261,6 +261,8 @@ body {
 # Contact
 --------------------------------------------------------------*/
 
+
+
 #contact {
   margin-top: 150px;
   min-height: 80vh;
@@ -353,7 +355,7 @@ body {
   .contact .form-group i {
     position: absolute;
     right: 15px;
-    top: 65%; /* POSICIONA EL ELEMENTO AL 50% DEL PADRE */
+    top: 45%; /* POSICIONA EL ELEMENTO AL 50% DEL PADRE */
     transform: translateY(-50%); /* MUEVE EL ELEMENT -50% DE SU PROPIO TAMAÑO HACIA ARRIBA */
     font-size: 1.5em;
     
