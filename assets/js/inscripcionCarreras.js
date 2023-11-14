@@ -32,7 +32,7 @@ const onDocumentReady = () => {
 
 
     $('.form-section').hide();
-
+    
     // Muestra la sección correspondiente cuando se selecciona una carrera
     $('#CarreraId').change(function () {
         var selectedCarrera = $(this).val();
@@ -41,12 +41,21 @@ const onDocumentReady = () => {
         // Muestra la sección correspondiente a la carrera seleccionada
         if (selectedCarrera === '5') { // ID de la carrera de Programación
             $('.materiasProgramacionPrimero').show();
-        } else if (selectedCarrera === '2') { // ID de la carrera de Marketing
-            // Mostrar otras secciones según sea necesario
-        } else if (selectedCarrera === '3') { // ID de la carrera de Administración Pública
+            
+        } else if (selectedCarrera === '2') { 
+            $('.materiasMarketing').show();
+        } else if (selectedCarrera === '3') { 
             $('.materiasPublicaPrimero').show();
+            
+        } else if (selectedCarrera === '4') { 
+            $('.materiasContable').show();
+            
+        
+        } else if (selectedCarrera === '6') { 
+            $('.materiasEnfermeria').show();
+        
         }
-        // Agrega más condiciones según sea necesario para otras carreras
+       
 
     });
 
