@@ -30,11 +30,11 @@ const onDocumentReady = () => {
 
         },
         highlight: function(element, errorClass, validClass) {
-            $(element).addClass(errorClass).removeClass(validClass);
+            
             $(element).next("span").show();
         },
         unhighlight: function(element, errorClass, validClass) {
-            $(element).removeClass(errorClass).addClass(validClass);
+            
             $(element).next("span").hide();
           
         },

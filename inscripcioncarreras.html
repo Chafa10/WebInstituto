@@ -361,7 +361,8 @@
                                  
                             <div class="col-md-12">
                              
-                                 <div class="form-floating mb-3 mt-3">
+                                 <div class="mb-3 mt-3">
+                                    <label for="name">Mayor Titulo Obtenido</label>
                                      <select class="form-select" name="MayorTituloObtenidoPadre" id="MayorTituloObtenido" required>
                                          <option value="0">Seleccione un Titulo</option>
                                          <option value="1">Nunca Asistio</option>
@@ -375,14 +376,15 @@
                                          <option value="9">Universitario Completa</option>
                                          <option value="10">No Sabe/No Contesta</option>
                                      </select>
-                                     <label for="name">Mayor Titulo Obtenido</label>
+                                     
                                  </div>
                              
                              </div>
                     
                          <H6><b>Maximo Nivel educativo de la madre</b></H6>
                          <div class="col-md-12">
-                             <div class="form-floating mb-3 mt-3">
+                             <div class="mb-3 mt-3">
+                                 <label for="name">Mayor Titulo Obtenido</label>
                                  <select class="form-select" name="MayorTituloObtenidoMadre" id="MayorTituloObtenido" required>
                                      <option value="0">Seleccione un Titulo</option>
                                      <option value="1">Nunca Asistio</option>
@@ -396,7 +398,7 @@
                                      <option value="9">Universitario Completa</option>
                                      <option value="10">No Sabe/No Contesta</option>
                                  </select>
-                                 <label for="name">Mayor Titulo Obtenido</label>
+                                
                              </div>
                          </div>
                         </div>
@@ -413,7 +415,7 @@
         <div class="section-title d-flex justify-content-center">       
                 <div class="row">
                     <div class="col-md-12 order-1 order-lg-2 text-left align-items-center">      
-                    <form class="email-form contactForm">
+                    <form class="email-form contactForm" id="trayectoriaOcupacionalForm">
                
       
                         <h3 class="text-center"><b class="box-top-bot">TRAYECTORIA OCUPACIONAL</b></h3>
@@ -435,9 +437,10 @@
                             <div class="col-md-6" >
                                 
                                     <!-- Name input-->
-                                    <div class="form-floating mb-3 mt-3">
-                                        <select class="form-select" name="OcupacionAlumno" id="OcupacionAlumno">
-                                            <option>Seleccione una Ocupación</option>
+                                    <div class="mb-3 mt-3">
+                                        <label for="SectorLaboral">Sector Laboral</label>
+                                        <select class="form-select" name="SectorLaboral" id="SectorLaboral">
+                                            <option value="0">Seleccione una Ocupación</option>
                                             <option value="1">Educación</option>
                                             <option value="2">Gobierno Sector Público</option>
                                             <option value="3">Servicio Financiero</option>
@@ -455,19 +458,20 @@
                                             <option value="15">Otro</option>
                                             
                                         </select>
-                                        <label for="name">Sector Laboral</label>
+                                        
                                     </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-floating mb-3 mt-3">
+                                <div class="mb-3 mt-3">
+                                    <label for="HorasTrabajo">Horas de trabajo diarias</label>
                                     <select class="form-select" name="HorasTrabajo" id="HorasTrabajo">
-                                        <option>Seleccione las Horas</option>
+                                        <option value="0">Seleccione las Horas</option>
                                         <option value="1">Entre 1 y 3</option>
                                         <option value="2">Entre 4 y 8</option>
                                         <option value="3">Más de 8</option>
 
                                     </select>
-                                    <label for="name">Horas de trabajo diarias</label>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -502,15 +506,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 form-section" id="ConQuienVive">
-                                        <div class="form-floating mb-3 mt-3">
+                                        <div class= "mb-3 mt-3">
+                                            <label for="name">Con quien vive</label>
                                             <select class="form-select" name="ConQuienVive" >
-                                                <option>Seleccione con quien vive</option>
+                                                <option value="0">Seleccione con quien vive</option>
                                                 <option value="1">Vive con sus padres</option>
                                                 <option value="2">Con su cónyuge o conviviente</option>
                                                 <option value="3">Con hijos</option>
                                                 <option value="4">Otros</option>
                                             </select>
-                                            <label for="name">Con quien vive</label>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -527,23 +531,24 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 form-section" id="FamiliaresACargo">
-                                        <div class="form-floating mb-3 mt-3">
+                                        <div class="mb-3 mt-3">
+                                            <label for="name">Familiares a cargo</label>
                                             <select class="form-select" name="FamiliaresACargo" >
-                                                <option>Seleccione un familiar</option>
+                                                <option value="0">Seleccione un familiar</option>
                                                 <option value="1">Padres</option>
                                                 <option value="2">Hijo/s</option>
                                                 <option value="3">Otros</option>
                                             </select>
-                                            <label for="name">Familiares a cargo</label>
                                         </div>
                                     </div>
 
                                     <h3 class="text-center"><b class="box-top-bot">Becas o Programas</b></h3>
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-md-7">
-                                        <div class="form-floating mb-3 mt-3">
+                                        <div class="mb-3 mt-3">
+                                            <label for="name">Posee Beca o plan o programa alguno</label>
                                             <select class="form-select" name="CondicionBecasProgramas" id="CondicionBecasProgramas">
-                                                <option>Seleccione uno</option>
+                                                <option value="0">Seleccione uno</option>
                                                 <option value="1">Ninguno</option>
                                                 <option value="2">Estimulos Económicos (INFD)</option>
                                                 <option value="3">Becas Bicentenario</option>
@@ -555,7 +560,7 @@
                                                 <option value="9">Argentina trabaja</option>
                                                 <option value="10">Ellas hacen</option>
                                             </select>
-                                            <label for="name">Posee Beca o plan o programa alguno</label>
+                                            
                                         </div>
                                         </div>
                                     </div>
@@ -666,9 +671,9 @@
 
                                 <div class="col-md-8">
                                    
-                                        <div class="form-floating mb-3 mt-3">
-                                            <input class="form-control" name="ObraSocialCual" id="ObraSocialCual" type="text" placeholder="Ingrese su nombre" />
+                                        <div class="mb-3 mt-3">
                                             <label for="name">Otras prácticas culturales</label>
+                                            <input class="form-control" name="ObraSocialCual" id="ObraSocialCual" type="text" placeholder="Ingrese su nombre" />
                                         </div>
                                     
                                 </div>
@@ -829,9 +834,9 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="form-floating mb-3 mt-3">
-                                    <input class="form-control" name="OtrasSitiosFrecuenta" id="OtrasPracticasCulturales" type="text" placeholder="Ingrese su nombre" />
+                                <div class="mb-3 mt-3">
                                     <label for="name">Otros Sitios Frecuentes</label>
+                                    <input class="form-control" name="OtrasSitiosFrecuenta" id="OtrasPracticasCulturales" type="text" placeholder="Ingrese su nombre" />
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -876,7 +881,7 @@
         <div class="section-title d-flex justify-content-center">
             
 
-                    <form action="forms/contact.php" method="post" role="form" class="email-form">
+                    <form class="email-form" id="fichaSaludForm">
 
                         <h3 class="text-center"><b class="box-top-bot" id="ficha-salud">FICHA DE SALUD EN </b></h3>
                         <h3 class="text-center"><b class="box-top-bot">CASO DE EMERGENCIA</b></h3>
@@ -985,17 +990,16 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h6>En caso de emergencia llamar a:</h6>
-                                    <div class="form-floating mb-3 mt-3">
+                                    <div class="mb-3 mt-3">
                                         
-                                        <input class="form-control" name="EmergenciaFamiliar" id="EmergenciaFamiliar" type="text" placeholder="Ingrese su nombre" />
                                         <label for="name">Apellido y Nombres</label>
+                                        <input class="form-control" name="EmergenciaFamiliar" id="EmergenciaFamiliar" type="text" placeholder="Ingrese su nombre y apellido" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating mb-3 mt-3">
-                                        
-                                        <input class="form-control" style="margin-top: 35px;" name="TelefonoEmergencia" id="TelefonoEmergencia" type="text" placeholder="Ingrese su nombre" />
+                                    <div class="mb-3 mt-3">
                                         <label for="name">Teléfono de contacto</label>
+                                        <input class="form-control" style="margin-top: 20px;" name="TelefonoEmergencia" id="TelefonoEmergencia" type="text" placeholder="Ingrese telefono del familiar" />
                                     </div>
                                 </div>
                                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">

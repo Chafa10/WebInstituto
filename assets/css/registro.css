@@ -36,15 +36,10 @@ body {
 
 /* Estilos para campos con errores */
 .error {
-  border: 1px solid red;  
-  background-color: #ffcccc;  
+  color: red;
 }
 
-/* Estilos para campos válidos */
-.valid {
-  border: 1px solid green;  
-  background-color: #ccffcc;  
-}
+
 
 
 
@@ -369,13 +364,12 @@ body {
     
   }
 
-  .contact .form-group i {
-    position: absolute;
-    right: 15px;
-    top: 45%; /* POSICIONA EL ELEMENTO AL 50% DEL PADRE */
-    transform: translateY(-50%); /* MUEVE EL ELEMENT -50% DE SU PROPIO TAMAÑO HACIA ARRIBA */
-    font-size: 1.5em;
-    
+.contact .form-group i:before {
+  position: absolute;
+  display: block;
+  top: 1.3rem;
+  right: 1rem;
+  font-size: 1.5rem;
 }
 
   .contact .remember a,

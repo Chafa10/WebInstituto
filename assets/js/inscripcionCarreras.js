@@ -55,6 +55,85 @@ const onDocumentReady = () => {
         function seleccionoMayorTitulo() {
             return $("#MayorTituloObtenido").val().length > 0; // Requiere el campo si se ha seleccionado un mayor título obtenido
         }
+        
+        
+        function siTrabaja() {
+            return $('input[name="TrabajaRB"]:checked').val() === '1';
+        }
+
+
+        $("#fichaSaludForm").validate({
+            rules: {
+                PoseeObraSocial: {
+                    required:  function siPoseeObraSocial() {
+                        return $('input[name="PoseeObraSocial"]:checked').val() === '1';
+                    }
+                },
+
+                EmergenciaFamiliar: {
+                    required: true,
+                    lettersonly: true
+                },
+
+                TelefonoEmergencia: {
+                    required: true,
+                    numbersonly: true
+                }
+
+            }
+        })
+
+        $("#trayectoriaOcupacionalForm").validate({
+            rules: {
+                SectorLaboral: {
+                    required: siTrabaja,
+                    selectcheck: true
+                },
+
+                HorasTrabajo: {
+                    required: siTrabaja,
+                    selectcheck: true
+                },
+                PensionadoOJubiladoRB: {
+                    required: true
+                },
+                ViveSolo: {
+                    required: true
+                    
+                },
+                ConQuienVive: {
+                    required:  function noViveSolo() {
+                        return $('input[name="ViveSolo"]:checked').val() === '0';
+                    },
+                    selectcheck: true
+                },
+                FamiliaresACargoRB: {
+                    required: true
+                },
+                FamiliaresACargo: {
+                    required:  function siFamiliaresACargo() {
+                        return $('input[name="FamiliaresACargoRB"]:checked').val() === '1';
+                    },
+                    selectcheck: true
+                },
+                CondicionBecasProgramas: {
+                    required: true,
+                    selectcheck: true
+                },
+                AccesoAInternetChb: {
+                    required:    function siUsaInternet() {
+                        return $('input[name="UsaInternetRB"]:checked').val() === '1';
+                    }
+                },
+                RedesChb: {
+                    required:    function siUsaRedesSociales() {
+                        return $('input[name="UtilizaRedes"]:checked').val() === '1';
+                    }
+            
+                },
+        
+            }
+        });
 
         $("#formacionForm").validate({
             rules: {
@@ -99,7 +178,17 @@ const onDocumentReady = () => {
                 MayorTituloPromedio: {
                     required: seleccionoMayorTitulo,
                     numbersonly: true
+                },
+                MayorTituloObtenidoPadre: {
+                    required: true,
+                    selectcheck: true
+                },
+                MayorTituloObtenidoMadre: {
+                    required: true,
+                    selectcheck: true
                 }
+
+
 
 
                 
