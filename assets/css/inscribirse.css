@@ -168,7 +168,7 @@ body {
 }
 
 /* Estilos para pantallas pequeñas (menos de 800 px) */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .checkbox-center {
       flex-wrap: wrap;
   }

@@ -30,7 +30,26 @@ function loadForm(useId) {
 const onDocumentReady = () => {
     loadForm(); 
 
-    
+
+    $('.form-section').hide();
+
+    // Muestra la sección correspondiente cuando se selecciona una carrera
+    $('#CarreraId').change(function () {
+        var selectedCarrera = $(this).val();
+        $('.form-section').hide(); // Oculta todas las secciones de materias
+
+        // Muestra la sección correspondiente a la carrera seleccionada
+        if (selectedCarrera === '5') { // ID de la carrera de Programación
+            $('.materiasProgramacionPrimero').show();
+        } else if (selectedCarrera === '2') { // ID de la carrera de Marketing
+            // Mostrar otras secciones según sea necesario
+        } else if (selectedCarrera === '3') { // ID de la carrera de Administración Pública
+            $('.materiasPublicaPrimero').show();
+        }
+        // Agrega más condiciones según sea necesario para otras carreras
+
+    });
+
         // Agregar reglas de validación
         $.validator.addMethod("lettersonly", function (value, element) {
             return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
@@ -453,31 +472,6 @@ const onDocumentReady = () => {
 }
 
 
-const onCarreraChange = (event) => {
-    const selectedCarrera = form.inputs.CarreraId.val();
-    console.log(selectedCarrera);
-    
-
-    // Oculta todas las secciones de materias
-    form.sections.materiasProgramacionPrimero.addClass('d-none');
-    
-    
-    
-    
-
-
-    // Muestra la sección correspondiente a la carrera seleccionada
-    if (selectedCarrera === '5') {
-        form.sections.materiasProgramacionPrimero.removeClass('d-none');
-        
-        
-
-    } else if (selectedCarrera === '3') {
-        // Agrega lógica para otras carreras si es necesario
-         form.sections.materiasPublicaPrimero.removeClass('d-none');
-    }
-    // Repite el patrón para otras carreras si es necesario
-}
 
 const onUsaInternetChange = (event) => {
     if(event.target.id === 'SiUsaInternet'){
