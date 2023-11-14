@@ -675,6 +675,12 @@ section {
   text-decoration: none;
 }
 
+@media (max-width: 1000px) {
+  #services {
+    display: flex;
+    
+  }
+}
 
 
 

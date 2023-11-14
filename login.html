@@ -50,20 +50,23 @@
                         <img src="assets/img/logo.png" class="img-fluid animated" alt="">
                     </div>
                     <div class="col-md-6 order-1 order-lg-2 text-left align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="email-form">
+                        <form id="loginForm" class="email-form">
                           <h3 class="text-center mb-5">Iniciar Sesion</h3>
                           
                             <div class="form-floating mb-5 mt-3 form-group">
                               <input class="form-control" name="Email" id="Email" type="text" placeholder="Ingrese su email" />
-                              <label for="name">Email</label>
+                              <span class="error-message"></span>
+                              <label for="Email">Email</label>
                               <i class='bx bxs-user'></i>
                           </div>
                            
                             <div class="form-floating mb-3 mt-3 form-group">
-                              <input class="form-control" name="Password" id="Password" type="password" placeholder="Ingrese su apellido" />
-                              <label for="name">Contraseña</label>
+                              <input class="form-control" name="Password" id="Password" type="password" placeholder="Ingrese su Password" />
+                              <span class="error-message"></span>
+                              <label for="Password">Contraseña</label>
                               <i class='bx bxs-lock-alt' ></i>
                           </div>
+                          
                             <div class="remember d-flex justify-content-between align-items-center">
                               <label class="d-flex align-items-center pt-2" for="Recordarme">
                                   <input type="checkbox" name="Recordarme"> Recordarme
@@ -99,9 +102,12 @@
       </div>
     </footer><!-- End Footer -->
     
-    
-    
-    <script src="/assets/js/main.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/latest/jquery.validate.min.js"></script>
+
+    <script src="/assets/js/login.js"></script>
     
 </body>
 </html>

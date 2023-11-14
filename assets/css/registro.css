@@ -32,6 +32,23 @@ body {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+
+
+/* Estilos para campos con errores */
+.error {
+  border: 1px solid red;  
+  background-color: #ffcccc;  
+}
+
+/* Estilos para campos válidos */
+.valid {
+  border: 1px solid green;  
+  background-color: #ccffcc;  
+}
+
+
+
+
 #preloader {
   position: fixed;
   top: 0;
