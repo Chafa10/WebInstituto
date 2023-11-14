@@ -59,7 +59,108 @@ const onDocumentReady = () => {
 
     });
 
-        // Agregar reglas de validación
+    if ($('#TituloSecundarioNO').is(':checked')) {
+        $('#SiAdeudaMaterias').hide();
+    }
+
+    
+    $('input[name="TituloSecundarioRB"]').change(function () {
+        if ($('#TituloSecundarioNO').is(':checked')) {
+            $('#SiAdeudaMaterias').show();
+        } else {
+            $('#SiAdeudaMaterias').hide();
+        }
+    });
+
+    //Si Trabaja
+
+    if ($('#TrabajaNo').is(':checked')) {
+        $('#SiTrabaja').hide();
+    }
+
+    
+    $('input[name="TrabajaRB"]').change(function () {
+        if ($('#TrabajaSi').is(':checked')) {
+            $('#SiTrabaja').show();
+        } else {
+            $('#SiTrabaja').hide();
+        }
+    });
+
+
+    // ViveSolo
+
+    if ($('#NoViveSolo').is(':checked')) {
+        $('#ConQuienVive').hide();
+    }
+
+    
+    $('input[name="ViveSolo"]').change(function () {
+        if ($('#SiViveSolo').is(':checked')) {
+            $('#ConQuienVive').show();
+        } else {
+            $('#ConQuienVive').hide();
+        }
+    });
+
+    //Familiares a cargo
+
+    if ($('#NoFamiliaresACargo').is(':checked')) {
+        $('#FamiliaresACargo').hide();
+    }
+
+    
+    $('input[name="FamiliaresACargoRB"]').change(function () {
+        if ($('#SiFamiliaresACargo').is(':checked')) {
+            $('#FamiliaresACargo').show();
+        } else {
+            $('#FamiliaresACargo').hide();
+        }
+    });
+
+    //Usa Internet
+    if ($('#NoUsaInternet').is(':checked')) {
+        $('#UsaInternet').hide();
+    }
+
+    
+    $('input[name="UsaInternetRB"]').change(function () {
+        if ($('#SiUsaInternet').is(':checked')) {
+            $('#UsaInternet').show();
+        } else {
+            $('#UsaInternet').hide();
+        }
+    });
+    
+    //Usa Redes
+    if ($('#NoUsaRedes').is(':checked')) {
+        $('#UsaRedes').hide();
+    }
+
+    
+    $('input[name="UtilizaRedes"]').change(function () {
+        if ($('#SiUsaRedes').is(':checked')) {
+            $('#UsaRedes').show();
+        } else {
+            $('#UsaRedes').hide();
+        }
+    });
+
+    //Lecturas frecuentes
+    if ($('#NoLecturasFrecuentes').is(':checked')) {
+        $('#RealizaLecturasFrecuentes').hide();
+    }
+
+    
+    $('input[name="LecturasFrecuentesRB"]').change(function () {
+        if ($('#SiLecturasFrecuentes').is(':checked')) {
+            $('#RealizaLecturasFrecuentes').show();
+        } else {
+            $('#RealizaLecturasFrecuentes').hide();
+        }
+    });
+
+
         $.validator.addMethod("lettersonly", function (value, element) {
             return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
         }, "Solo se permiten letras");
@@ -69,7 +170,7 @@ const onDocumentReady = () => {
         }, "Solo se permiten números");
 
         $.validator.addMethod("selectcheck", function (value) {
-            return value !== '0'; // Cambia '0' por el valor que representa la opción por defecto
+            return value !== '0'; 
         }, "Por favor, seleccione una opción");
 
         function esTituloSecundarioSeleccionado() {
@@ -431,118 +532,10 @@ const onDocumentReady = () => {
         });
     
     
-
-
-    const NoAdeudaMaterias = $('#NoAdeudaMaterias');
-    const SiTrabaja = $('#SiTrabaja');
-    const RealizaLecturasFrecuentes = $('#RealizaLecturasFrecuentes');
-    const UsaInternet = $('#UsaInternet');
-    const UsaRedes = $('#UsaRedes');
-    const FamiliaresACargo = $('#FamiliaresACargo');
-
-
-    
-    
-    form.sections.NoAdeudaMaterias.addClass('d-none');
-    form.sections.SiTrabaja.addClass('d-none');
-    form.sections.RealizaLecturasFrecuentes.addClass('d-none');
-    form.sections.FamiliaresACargo.addClass('d-none');
-    form.sections.UsaRedes.addClass('d-none');
-    form.sections.UsaInternet.addClass('d-none');
-
-   
-
-    
-    
-
-
-    form.inputs.TituloSecundarioSI.change(onTituloSecundarioChange);
-    form.inputs.TituloSecundarioNO.change(onTituloSecundarioChange);
-
-    form.inputs.TrabajaSi.change(onSiTrabajaChange);
-    form.inputs.TrabajaNo.change(onSiTrabajaChange);
-
-    form.inputs.SiViveSolo.change(onViveConAlquienChange);
-    form.inputs.NoViveSolo.change(onViveConAlquienChange);
-
-    form.inputs.SiFamiliaresACargo.change(onSiFamiliaresAcargo);
-    form.inputs.NoFamiliaresACargo.change(onSiFamiliaresAcargo);
-
-    form.inputs.SiLecturasFrecuentes.change(onRealizaLecturasFrecuentes);
-    form.inputs.NoLecturasFrecuentes.change(onRealizaLecturasFrecuentes);
-
-    form.inputs.SiUsaRedes.change(onUsaRedesChange);
-    form.inputs.NoUsaRedes.change(onUsaRedesChange);
-
-    form.inputs.SiUsaInternet.change(onUsaInternetChange);
-    form.inputs.NoUsaInternet.change(onUsaInternetChange);
-
-    
 }
 
 
 
-const onUsaInternetChange = (event) => {
-    if(event.target.id === 'SiUsaInternet'){
-        form.sections.UsaInternet.removeClass('d-none');
-    } else {
-        form.sections.UsaInternet.addClass('d-none');
-    }
-}
-
-const onUsaRedesChange = (event) => {
-    if(event.target.id === 'SiUsaRedes'){
-        form.sections.UsaRedes.removeClass('d-none');
-    } else {
-        form.sections.UsaRedes.addClass('d-none');
-    }
-}
-
-const onTituloSecundarioChange = (event) => {
-    if(event.target.id === 'TituloSecundarioSI') {
-        form.sections.SiAdeudaMaterias.addClass('d-none');
-        form.sections.NoAdeudaMaterias.removeClass('d-none');
-        form.sections.NoAdeudaMaterias_mid.removeClass('d-none');
-    } else {
-        form.sections.SiAdeudaMaterias.removeClass('d-none');
-        form.sections.NoAdeudaMaterias.addClass('d-none');
-        form.sections.NoAdeudaMaterias_mid.addClass('d-none');
-    }
-}
-
-const onSiTrabajaChange = (event) => {
-    if(event.target.id === 'TrabajaSi'){
-        
-        form.sections.SiTrabaja.removeClass('d-none');
-    } else {
-       
-        form.sections.SiTrabaja.addClass('d-none');
-    }
-}
-
-const onViveConAlquienChange = (event) => {
-    if(event.target.id === 'NoViveSolo'){
-        form.sections.ConQuienVive.removeClass('d-none');
-    } else {
-        form.sections.ConQuienVive.addClass('d-none');
-    }
-}
-
-const onSiFamiliaresAcargo = (event) => {
-    if(event.target.id === 'SiFamiliaresACargo'){
-        form.sections.FamiliaresACargo.removeClass('d-none');
-    } else {
-        form.sections.FamiliaresACargo.addClass('d-none');
-    }
-}
-
-const onRealizaLecturasFrecuentes = (event) => {
-    if(event.target.id === 'SiLecturasFrecuentes'){
-        form.sections.RealizaLecturasFrecuentes.removeClass('d-none');
-    } else {
-        form.sections.RealizaLecturasFrecuentes.addClass('d-none');
-    }
-}
 
 $(document).ready(onDocumentReady);
 
