@@ -156,6 +156,7 @@ body {
 }
 
 
+
 #ficha-salud {
   margin: 0;
 }
@@ -169,13 +170,14 @@ body {
 
 /* Estilos para pantallas pequeñas (menos de 800 px) */
 @media (max-width: 1000px) {
-  .checkbox-center {
+  .chk-center {
       flex-wrap: wrap;
   }
 
-  .checkbox-center label {
+  .chk-center label {
       width: 50%; /* Dos columnas, cada una ocupando el 50% del ancho */
   }
+  
 }
 
  

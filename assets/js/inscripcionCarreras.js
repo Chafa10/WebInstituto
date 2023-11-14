@@ -59,16 +59,17 @@ const onDocumentReady = () => {
 
     });
 
-    if ($('#TituloSecundarioNO').is(':checked')) {
-        $('#SiAdeudaMaterias').hide();
-    }
+    $('#SiAdeudaMaterias').hide();
+    $('#NoAdeudaMaterias').show();
 
-    
+    // Maneja el evento de cambio en los radio buttons
     $('input[name="TituloSecundarioRB"]').change(function () {
-        if ($('#TituloSecundarioNO').is(':checked')) {
+        if ($('#TituloSecundarioSI').is(':checked')) {
             $('#SiAdeudaMaterias').show();
+            $('#NoAdeudaMaterias').hide();
         } else {
             $('#SiAdeudaMaterias').hide();
+            $('#NoAdeudaMaterias').show();
         }
     });
 
