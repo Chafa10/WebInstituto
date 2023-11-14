@@ -160,6 +160,24 @@ body {
   margin: 0;
 }
 
+/* Estilos para pantallas grandes */
+.checkbox-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para pantallas pequeñas (menos de 800 px) */
+@media (max-width: 800px) {
+  .checkbox-center {
+      flex-wrap: wrap;
+  }
+
+  .checkbox-center label {
+      width: 50%; /* Dos columnas, cada una ocupando el 50% del ancho */
+  }
+}
+
  
  
   @keyframes animate-loading {
@@ -175,7 +193,9 @@ body {
     .email-form {
         margin-top: 3rem; /* mt-5 en Bootstrap equivale a 3rem de margen superior */
     }
-}
+  }
+
+
 
 /*--------------------------------------------------------------
 # Header
